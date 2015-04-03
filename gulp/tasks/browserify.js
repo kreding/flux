@@ -8,18 +8,18 @@ var connect = require('gulp-connect');
 var config = require('../config').browserify;
 
 var bundler = watchify(browserify(config.src, watchify.args));
-config.settings.transform.forEach(function(t) {
-  bundler.transform(t);
+
+config.settings.transform.forEach(function(t){
+    bundler.transform(t);
 });
 
-gulp.task('browserify', bundle);
+gulp.task('borwserify', bundle);
 bundler.on('update', bundle);
 
-function bundle() {
-  return bundler.bundle()
-  // log errors if they happen
-  .on('error', gutil.log.bind(gutil, 'Browserify Error'))
-  .pipe(source(config.outputName))
-  .pipe(gulp.dest(config.dest))
-  .pipe(connect.reload());
+function bundle(){
+    return bundler.bundle()
+        .on('update', gutil.log.bind(gutil, 'Browserif Error'))
+        .pipe(source(config.outputName))
+        .pipe(gulp.dest(config.dest))
+        .pipe(connect.reload());
 }
