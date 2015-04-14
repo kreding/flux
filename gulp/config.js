@@ -27,7 +27,7 @@ module.exports = {
     },
     src: src + '/js/index.jsx',
     dest: dest + '/js',
-    outputName: 'index.js',
+    outputName: 'index.js'
   },
   html: {
     src: 'src/index.html',

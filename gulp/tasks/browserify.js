@@ -13,7 +13,7 @@ config.settings.transform.forEach(function(t){
     bundler.transform(t);
 });
 
-gulp.task('borwserify', bundle);
+gulp.task('browserify', bundle);
 bundler.on('update', bundle);
 
 function bundle(){

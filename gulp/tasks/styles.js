@@ -7,5 +7,5 @@ gulp.task('styles', function(){
     gulp.src(config.src)
         .pipe(stylus(config.settings))
         .pipe(gulp.dest(config.dest))
-        .pipe(connnect.reload())
+        .pipe(connect.reload())
 });
