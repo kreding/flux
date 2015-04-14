@@ -11,7 +11,9 @@ module.exports = {
   },
 
   clearList: function() {
-    console.warn('clearList action not yet implemented...');
+    AppDispatcher.handleViewAction({
+    	type: Constants.ActionTypes.CLEAR_TASK
+    });
   },
 
   completeTask: function(task) {

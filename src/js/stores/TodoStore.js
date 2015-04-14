@@ -11,6 +11,10 @@ function addItem(title, completed=false) {
   _data.push({title, completed});
 }
 
+function clearAllItems(){
+	_data = [];
+}
+
 // Facebook style store creation.
 let TodoStore = assign({}, BaseStore, {
 
@@ -28,16 +32,16 @@ let TodoStore = assign({}, BaseStore, {
     switch(action.type) {
       case Constants.ActionTypes.ADD_TASK:
         let text = action.text.trim();
-        // NOTE: if this action needs to wait on another store:
-        // AppDispatcher.waitFor([OtherStore.dispatchToken]);
-        // For details, see: http://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html#why-we-need-a-dispatcher
         if (text !== '') {
           addItem(text);
           TodoStore.emitChange();
         }
         break;
 
-      // add more cases for other actionTypes...
+      case Constants.ActionTypes.CLEAR_TASK:;
+      	clearAllItems();
+      	TodoStore.emitChange();
+      	break;
     }
   })
 

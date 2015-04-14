@@ -7,6 +7,6 @@ gulp.task('clean', function(){
   del(['dist/**/*'])
 });
 
-gulp.task('build', ['clean', 'webpack', 'styles', 'html'], function(){
+gulp.task('build', ['webpack', 'styles', 'html'], function(){
     gulp.src(config.src).pipe(connect.reload());
 });
