@@ -30,7 +30,7 @@ module.exports = {
     outputName: 'index.js'
   },
   html: {
-    src: 'src/index.html',
+    src: 'src/**/*.html',
     dest: dest
   },
   watch: {

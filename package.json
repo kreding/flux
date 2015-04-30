@@ -11,6 +11,7 @@
     "browserify": "^9.0.3",
     "css-loader": "^0.10.1",
     "del": "^1.1.1",
+    "extract-text-webpack-plugin": "^0.5.0",
     "gulp": "^3.8.7",
     "gulp-connect": "^2.2.0",
     "gulp-stylus": "*",
